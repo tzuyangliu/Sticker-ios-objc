@@ -1,0 +1,10 @@
+PODS:
+  - UIActionSheet+Blocks (0.8.1)
+
+DEPENDENCIES:
+  - UIActionSheet+Blocks (~> 0.8.1)
+
+SPEC CHECKSUMS:
+  UIActionSheet+Blocks: c8b9c02f3d08964e8f7a4202f004a639c15eab80
+
+COCOAPODS: 0.35.0
