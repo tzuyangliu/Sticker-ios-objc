@@ -11,7 +11,7 @@
 
 #import "Sticker.h"
 
-@interface WorkView()
+@interface WorkView()<ZDStickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *baseImageView;
 
 @property (strong, nonatomic) UIImage *baseImage;
@@ -43,6 +43,7 @@
 
 - (void)addSticker:(Sticker *)sticker{
     StickerView *newStickerView = [[StickerView alloc] initWithSticker:sticker];
+    newStickerView.delegate = self;
     [self.stickerViewArray addObject:newStickerView];
     [self addSubview:newStickerView];
 }
@@ -54,6 +55,12 @@
     [self.stickerViewArray removeAllObjects];
 }
 
+#pragma mark - Sticker view delegte
+
+- (void)stickerViewDidClose:(ZDStickerView *)sticker{
+    [self.stickerViewArray removeObject:sticker];
+}
+
 #pragma mark - generate
 
 - (void)generateWithBlock:(void (^)(UIImage *, NSError *))block{
@@ -63,6 +70,7 @@
     [self.baseImage drawInRect:self.bounds];
     for (StickerView *stickerView in self.stickerViewArray) {
         CGContextSaveGState(context);
+        // Generate pure imageview
         UIImage *image = [(UIImageView *)stickerView.contentView image];
         UIImageView *view = [[UIImageView alloc] initWithFrame:stickerView.frame];
         view.image = image;

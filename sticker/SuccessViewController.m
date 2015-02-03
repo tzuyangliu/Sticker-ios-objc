@@ -39,8 +39,28 @@
 - (IBAction)saveButtonPressed:(id)sender {
     UIImageWriteToSavedPhotosAlbum(self.image,
                                    self,
-                                   nil,
+                                   @selector(image:didFinishSavingWithError:contextInfo:),
                                    nil);
+}
+
+- (void)               image: (UIImage *) image
+    didFinishSavingWithError: (NSError *) error
+                 contextInfo: (void *) contextInfo{
+    if (!error){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"图片保存成功"
+                                                        message:@"请前往相册查看"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"图片保存失败"
+                                                        message:@"请检查是否已经授权访问相册"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 @end
