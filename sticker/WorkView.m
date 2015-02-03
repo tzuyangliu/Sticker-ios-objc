@@ -58,13 +58,14 @@
 
 - (void)generateWithBlock:(void (^)(UIImage *, NSError *))block{
     UIGraphicsBeginImageContextWithOptions(self.frame.size, YES, 0.0);
-    NSLog(@"%f, %f", self.frame.size.width, self.frame.size.height);
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     [self.baseImage drawInRect:self.bounds];
     for (StickerView *stickerView in self.stickerViewArray) {
         CGContextSaveGState(context);
-        UIView *view = stickerView;
+        UIImage *image = [(UIImageView *)stickerView.contentView image];
+        UIImageView *view = [[UIImageView alloc] initWithFrame:stickerView.frame];
+        view.image = image;
         // Center the context around the view's anchor point
         CGContextTranslateCTM(context, [view center].x, [view center].y);
         // Apply the view's transform about the anchor point

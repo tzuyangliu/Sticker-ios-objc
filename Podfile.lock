@@ -1,10 +1,13 @@
 PODS:
   - UIActionSheet+Blocks (0.8.1)
+  - ZDStickerView (0.1.16)
 
 DEPENDENCIES:
   - UIActionSheet+Blocks (~> 0.8.1)
+  - ZDStickerView (~> 0.1.16)
 
 SPEC CHECKSUMS:
   UIActionSheet+Blocks: c8b9c02f3d08964e8f7a4202f004a639c15eab80
+  ZDStickerView: 527afeea748de6cf30fecba664b87922e1e7ea90
 
 COCOAPODS: 0.35.0

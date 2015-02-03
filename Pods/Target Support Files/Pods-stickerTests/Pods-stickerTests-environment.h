@@ -12,3 +12,9 @@
 #define COCOAPODS_VERSION_MINOR_UIActionSheet_Blocks 8
 #define COCOAPODS_VERSION_PATCH_UIActionSheet_Blocks 1
 
+// ZDStickerView
+#define COCOAPODS_POD_AVAILABLE_ZDStickerView
+#define COCOAPODS_VERSION_MAJOR_ZDStickerView 0
+#define COCOAPODS_VERSION_MINOR_ZDStickerView 1
+#define COCOAPODS_VERSION_PATCH_ZDStickerView 16
+

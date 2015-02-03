@@ -12,11 +12,13 @@
 @implementation StickerView
 
 - (id)initWithSticker:(Sticker *)sticker{
-    self = [super initWithImage:sticker.image];
+    NSInteger x = arc4random_uniform(300);
+    NSInteger y = arc4random_uniform(300);
+    self = [super initWithFrame:CGRectMake(x, y, 100, 100)];
     if (self){
-        NSInteger x = arc4random_uniform(300);
-        NSInteger y = arc4random_uniform(300);
-        self.frame = CGRectMake(x, y, 100, 100);
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+        imageView.image = sticker.image;
+        self.contentView = imageView;
     }
     return self;
 }

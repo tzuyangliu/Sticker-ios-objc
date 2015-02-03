@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 LiuZiyang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <ZDStickerView.h>
 @class Sticker;
-@interface StickerView : UIImageView
+@interface StickerView : ZDStickerView
 
 - (id)initWithSticker:(Sticker *)sticker;
 

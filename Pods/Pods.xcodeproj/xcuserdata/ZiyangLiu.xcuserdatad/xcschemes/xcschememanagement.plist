@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-ZDStickerView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-sticker-UIActionSheet+Blocks.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-sticker-ZDStickerView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -20,6 +30,11 @@
 			<false/>
 		</dict>
 		<key>Pods-stickerTests-UIActionSheet+Blocks.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-stickerTests-ZDStickerView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,32 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4249FC620D42F9A7BD369795</key>
+		<key>1686563638F4DD2752CED530</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4EF85AA51D59B4D10E8CBD28</key>
+		<key>388051047E4348F42D67C8D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>75904CC3768F1B5A0745840B</key>
+		<key>758211CB69C363D0D5A61D16</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>99D6803C248C5B00EE9A015A</key>
+		<key>94A6AEE994D32BC62A1C4E56</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ACE0A1471F0D951DF21543AC</key>
+		<key>A199F3D19D042A92C5DF8C60</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EE186A21C841C4CA9B52CFA5</key>
+		<key>AABF06D6E12C355A5B17EB52</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C2CBE2B63A40D1CADD470428</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CAE9E1963BBC5E4EDAA781AE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FED7BC9BC5BF2C55A9F1BBDF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

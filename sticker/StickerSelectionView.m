@@ -48,7 +48,6 @@
 #pragma mark - collectionview delegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"%@", indexPath);
     self.selectStickerSuccessBlock(self.stickerArray[indexPath.row]);
 }
 

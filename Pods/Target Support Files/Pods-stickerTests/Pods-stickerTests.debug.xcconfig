@@ -1,6 +1,6 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/UIActionSheet+Blocks"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/UIActionSheet+Blocks"
-OTHER_LDFLAGS = -ObjC -l"Pods-stickerTests-UIActionSheet+Blocks"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/UIActionSheet+Blocks" "${PODS_ROOT}/Headers/Public/ZDStickerView"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/UIActionSheet+Blocks" -isystem "${PODS_ROOT}/Headers/Public/ZDStickerView"
+OTHER_LDFLAGS = -ObjC -l"Pods-stickerTests-UIActionSheet+Blocks" -l"Pods-stickerTests-ZDStickerView" -framework "QuartzCore"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods
