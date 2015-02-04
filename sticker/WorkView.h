@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class Sticker;
 @interface WorkView : UIView
-
+- (BOOL)hasImage;
 - (void)setBaseImage:(UIImage *)baseImage;
 
 - (void)clearStickers;

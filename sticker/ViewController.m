@@ -28,6 +28,10 @@ typedef void(^PickStickerSuccessBlock)(Sticker *sticker);
 
 @implementation ViewController
 
+- (void)restart{
+    [self.workView setBaseImage:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     __weak typeof(self) weakSelf = self;
@@ -35,7 +39,16 @@ typedef void(^PickStickerSuccessBlock)(Sticker *sticker);
         [weakSelf.workView setBaseImage:image];
     };
     self.pickStickerSuccessBlock = ^(Sticker *sticker){
-        [weakSelf.workView addSticker:sticker];
+        if ([weakSelf.workView hasImage]){
+            [weakSelf.workView addSticker:sticker];
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请先选择一张照片"
+                                                            message:@"点击选择照片按钮进行选择"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"确定"
+                                                  otherButtonTitles:nil, nil];
+            [alert show];
+        }
     };
 }
 
@@ -60,6 +73,15 @@ typedef void(^PickStickerSuccessBlock)(Sticker *sticker);
 }
 
 - (IBAction)saveAndShareButtonPressed:(id)sender {
+    if (![self.workView hasImage]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请先选择一张照片"
+                                                        message:@"点击选择照片按钮进行选择"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
     __weak typeof(self) weakSelf = self;
     [self.workView generateWithBlock:^(UIImage *finalImage, NSError *error) {
         weakSelf.finalImage = finalImage;

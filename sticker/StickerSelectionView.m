@@ -20,7 +20,7 @@
     self = [super initWithCoder:aDecoder];
     if (self){
         self.stickerArray = [NSMutableArray array];
-        for (NSInteger i = 0; i < 4; i++){
+        for (NSInteger i = 0; i <= 6; i++){
             Sticker *sticker = [[Sticker alloc] init];
             sticker.image = [UIImage imageNamed:[NSString stringWithFormat:@"%zd", i]];
             [self.stickerArray addObject:sticker];

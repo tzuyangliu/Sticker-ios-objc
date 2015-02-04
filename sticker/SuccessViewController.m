@@ -7,6 +7,7 @@
 //
 
 #import "SuccessViewController.h"
+#import "ViewController.h"
 
 @interface SuccessViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -61,6 +62,12 @@
                                               otherButtonTitles:nil, nil];
         [alert show];
     }
+}
+
+- (IBAction)finishButtonPressed:(id)sender {
+    ViewController *viewController = self.navigationController.viewControllers[0];
+    [viewController restart];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
