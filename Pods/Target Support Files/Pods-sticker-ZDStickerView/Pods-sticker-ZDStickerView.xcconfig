@@ -1,1 +1,0 @@
-PODS_STICKER_ZDSTICKERVIEW_OTHER_LDFLAGS = -framework "QuartzCore"

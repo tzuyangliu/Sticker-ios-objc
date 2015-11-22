@@ -12,7 +12,7 @@
 #import "SuccessViewController.h"
 
 #import <UIActionSheet+Blocks.h>
-#import "ZYUIImagePickerHelper.h"
+#import <SHPImagePickerController.h>
 
 typedef void(^PickBaseImageSuccessBlock)(UIImage *image);
 typedef void(^PickStickerSuccessBlock)(Sticker *sticker);
@@ -66,7 +66,7 @@ typedef void(^PickStickerSuccessBlock)(Sticker *sticker);
                          if (buttonIndex > 1){
                              return;
                          }
-                         [ZYUIImagePickerHelper showImagePickerOfType:(ZYUIImagePickerType)buttonIndex
+                         [SHPImagePickerController showImagePickerOfType:(SHPImagePickerType)buttonIndex
                                                    fromViewController:self
                                                               success:self.pickBaseImageSuccessBlock];
                      }];

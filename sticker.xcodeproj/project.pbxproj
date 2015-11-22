@@ -21,7 +21,6 @@
 		32B642FF1A80FD7D00FD6341 /* WorkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B642FE1A80FD7D00FD6341 /* WorkView.m */; };
 		32B643031A80FDBB00FD6341 /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B643021A80FDBB00FD6341 /* Sticker.m */; };
 		32B643061A81003200FD6341 /* StickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B643051A81003200FD6341 /* StickerView.m */; };
-		32B643091A8100BE00FD6341 /* ZYUIImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B643081A8100BE00FD6341 /* ZYUIImagePickerHelper.m */; };
 		8D4DE8869F9B426D181BD4F1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E14A73AF0F92816AA82BB6E0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,8 +61,6 @@
 		32B643021A80FDBB00FD6341 /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
 		32B643041A81003200FD6341 /* StickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerView.h; sourceTree = "<group>"; };
 		32B643051A81003200FD6341 /* StickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerView.m; sourceTree = "<group>"; };
-		32B643071A8100BE00FD6341 /* ZYUIImagePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUIImagePickerHelper.h; sourceTree = "<group>"; };
-		32B643081A8100BE00FD6341 /* ZYUIImagePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUIImagePickerHelper.m; sourceTree = "<group>"; };
 		C4949CBA1412E618012CA765 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DDE4CDD5677DC3040C816F6E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E14A73AF0F92816AA82BB6E0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +108,6 @@
 		32B642D31A80FBCB00FD6341 /* sticker */ = {
 			isa = PBXGroup;
 			children = (
-				32B6430A1A8100D300FD6341 /* Helper */,
 				32B643001A80FDA900FD6341 /* Module */,
 				32B642D81A80FBCB00FD6341 /* AppDelegate.h */,
 				32B642D91A80FBCB00FD6341 /* AppDelegate.m */,
@@ -171,15 +167,6 @@
 			name = Module;
 			sourceTree = "<group>";
 		};
-		32B6430A1A8100D300FD6341 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				32B643071A8100BE00FD6341 /* ZYUIImagePickerHelper.h */,
-				32B643081A8100BE00FD6341 /* ZYUIImagePickerHelper.m */,
-			);
-			name = Helper;
-			sourceTree = "<group>";
-		};
 		8C1098F7CDE08F1B8AD0205A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +196,7 @@
 				32B642CE1A80FBCB00FD6341 /* Frameworks */,
 				32B642CF1A80FBCB00FD6341 /* Resources */,
 				30DEC072D7F367ACFDD25803 /* Copy Pods Resources */,
+				61D23596CAC644EDAEB80134 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,8 +231,9 @@
 		32B642C91A80FBCB00FD6341 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = LiuZiyang;
+				CLASSPREFIX = SHP;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "刘子洋";
 				TargetAttributes = {
 					32B642D01A80FBCB00FD6341 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -325,6 +314,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		61D23596CAC644EDAEB80134 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -338,7 +342,6 @@
 				32B642FF1A80FD7D00FD6341 /* WorkView.m in Sources */,
 				3239F9141A81133800C4DDB2 /* SuccessViewController.m in Sources */,
 				32B643061A81003200FD6341 /* StickerView.m in Sources */,
-				32B643091A8100BE00FD6341 /* ZYUIImagePickerHelper.m in Sources */,
 				32B642E01A80FBCB00FD6341 /* ViewController.m in Sources */,
 				32B642D71A80FBCB00FD6341 /* main.m in Sources */,
 				3239F90E1A81041200C4DDB2 /* StickerCell.m in Sources */,
@@ -404,6 +407,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -466,7 +470,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = sticker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyliu.sticker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -477,7 +483,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = sticker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyliu.sticker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -496,6 +504,7 @@
 				);
 				INFOPLIST_FILE = stickerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yicheng.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sticker.app/sticker";
 			};
@@ -511,6 +520,7 @@
 				);
 				INFOPLIST_FILE = stickerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yicheng.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sticker.app/sticker";
 			};

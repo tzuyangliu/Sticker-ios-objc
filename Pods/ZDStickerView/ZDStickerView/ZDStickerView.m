@@ -301,7 +301,6 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     touchStart = [touch locationInView:self.superview];
-    [self showEditingHandles];
     if([_delegate respondsToSelector:@selector(stickerViewDidBeginEditing:)]) {
         [_delegate stickerViewDidBeginEditing:self];
     }
