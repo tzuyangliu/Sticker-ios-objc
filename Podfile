@@ -2,8 +2,8 @@
 platform :ios, '7.0'
 
 pod 'SHPImagePickerController', '1.0.0'
-pod 'UIActionSheet+Blocks', '~> 0.8.1'
-pod 'ZDStickerView', '~> 0.1.16'
+pod 'UIActionSheet+Blocks', '~> 0.9'
+pod 'ZDStickerView', '0.1.18'
 
 target 'sticker' do
 

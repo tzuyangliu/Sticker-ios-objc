@@ -1,16 +1,16 @@
 PODS:
   - SHPImagePickerController (1.0.0)
-  - UIActionSheet+Blocks (0.8.1)
-  - ZDStickerView (0.1.16)
+  - UIActionSheet+Blocks (0.9)
+  - ZDStickerView (0.1.18)
 
 DEPENDENCIES:
   - SHPImagePickerController (= 1.0.0)
-  - UIActionSheet+Blocks (~> 0.8.1)
-  - ZDStickerView (~> 0.1.16)
+  - UIActionSheet+Blocks (~> 0.9)
+  - ZDStickerView (= 0.1.18)
 
 SPEC CHECKSUMS:
   SHPImagePickerController: 7186f56aea889f74fdc356b2eb45e703dc9970a3
-  UIActionSheet+Blocks: 7fdab45fc8f15ac2dc1cd65af1470746600b5f46
-  ZDStickerView: d6d294eab5ccd3794273c652ce8fa5dc43b72032
+  UIActionSheet+Blocks: e180b7dad0a721ab7f212ac9742af799008bb358
+  ZDStickerView: 6a9dd79e4e0e9f6686b34993a65bd50229c7b061
 
 COCOAPODS: 0.39.0
